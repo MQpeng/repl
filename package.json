@@ -1,6 +1,6 @@
 {
-  "name": "@vue/repl",
-  "version": "4.6.3",
+  "name": "@tonyer/vue-repl",
+  "version": "4.6.3-beta.0",
   "description": "Vue component for editing Vue components",
   "packageManager": "pnpm@10.14.0",
   "type": "module",
@@ -24,6 +24,11 @@
     "./codemirror-editor": {
       "types": "./dist/codemirror-editor.d.ts",
       "import": "./dist/codemirror-editor.js",
+      "require": null
+    },
+    "./split-pane": {
+      "types": "./dist/split-pane.d.ts",
+      "import": "./dist/split-pane.js",
       "require": null
     },
     "./core": {
@@ -67,14 +72,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/repl.git"
+    "url": "git+https://github.com/MQpeng/repl.git"
   },
   "author": "Evan You",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vuejs/repl/issues"
+    "url": "https://github.com/MQpeng/repl/issues"
   },
-  "homepage": "https://github.com/vuejs/repl#readme",
+  "homepage": "https://github.com/MQpeng/repl#readme",
   "devDependencies": {
     "@babel/standalone": "^7.28.2",
     "@babel/types": "^7.28.2",

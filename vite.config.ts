@@ -26,11 +26,11 @@ const patchCssFiles: Plugin = {
   writeBundle() {
     //  inject css imports to the files
     const outDir = path.resolve('dist')
-    ;['vue-repl', 'monaco-editor', 'codemirror-editor'].forEach((file) => {
-      const filePath = path.resolve(outDir, file + '.js')
-      const content = fs.readFileSync(filePath, 'utf-8')
-      fs.writeFileSync(filePath, `import './${file}.css'\n${content}`)
-    })
+      ;['vue-repl', 'monaco-editor', 'codemirror-editor'].forEach((file) => {
+        const filePath = path.resolve(outDir, file + '.js')
+        const content = fs.readFileSync(filePath, 'utf-8')
+        fs.writeFileSync(filePath, `import './${file}.css'\n${content}`)
+      })
   },
 }
 
@@ -60,6 +60,7 @@ export default mergeConfig(base, {
         core: './src/core.ts',
         'monaco-editor': './src/editor/MonacoEditor.vue',
         'codemirror-editor': './src/editor/CodeMirrorEditor.vue',
+        'split-pane': './src/SplitPane.vue'
       },
       formats: ['es'],
       fileName: () => '[name].js',
