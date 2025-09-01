@@ -26,7 +26,7 @@ const patchCssFiles: Plugin = {
   writeBundle() {
     //  inject css imports to the files
     const outDir = path.resolve('dist')
-      ;['vue-repl', 'monaco-editor', 'codemirror-editor'].forEach((file) => {
+      ;['vue-repl', 'monaco-editor', 'codemirror-editor', 'split-pane'].forEach((file) => {
         const filePath = path.resolve(outDir, file + '.js')
         const content = fs.readFileSync(filePath, 'utf-8')
         fs.writeFileSync(filePath, `import './${file}.css'\n${content}`)
